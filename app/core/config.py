@@ -35,17 +35,9 @@ class Settings(BaseSettings):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        with self.CONFIG_PATH as p:
-            if not p.exists():
-                p.mkdir(parents=True, exist_ok=True)
-
-        with self.LOG_PATH as p:
-            if not p.exists():
-                p.mkdir(parents=True, exist_ok=True)
-
-        with self.IMAGE_CACHE_PATH as p:
-            if not p.exists():
-                p.mkdir(parents=True, exist_ok=True)
+        for path in [self.CONFIG_PATH, self.LOG_PATH, self.IMAGE_CACHE_PATH]:
+            if not path.exists():
+                path.mkdir(parents=True, exist_ok=True)
 
     class Config:
         # 环境变量名称必须与字段名称匹配
