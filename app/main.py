@@ -13,7 +13,6 @@ def init_routers(application: FastAPI):
 
 @asynccontextmanager
 async def lifespan(application: FastAPI):
-    # 启动 MQTT 客户端
     init_routers(application)
     yield
 
