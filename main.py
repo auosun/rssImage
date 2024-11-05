@@ -25,6 +25,12 @@ client_settings = {
             "Referer": "https://kp.m-team.cc/",
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
         }
+    },
+    "www.javbus.com": {
+        "headers": {
+            "Referer": "https://www.javbus.com/",
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+        }
     }
 
 }
